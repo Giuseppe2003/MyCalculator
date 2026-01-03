@@ -1,0 +1,25 @@
+name: Continouos integration
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Build
+        run: mvn -B clean compile
