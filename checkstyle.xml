@@ -12,9 +12,7 @@
         </module>
 
         <!-- Regola per spazi tra nome metodo e parentesi -->
-        <module name="MethodParamPad">
-            <property name="allowLineBreak" value="true"/>
-        </module>
+        <module name="MethodParamPad"/>
 
         <!-- Indentazione a 4 spazi -->
         <module name="Indentation">
