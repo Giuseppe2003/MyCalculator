@@ -26,3 +26,6 @@ jobs:
 
       - name: Build
         run: mvn -B clean compile
+
+      - name: Run Tests
+        run: mvn test
