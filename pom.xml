@@ -27,14 +27,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.6.0</version> <!-- versione esistente su Maven Central -->
+                <version>3.6.0</version>
+
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation> <!-- tuo file personalizzato -->
+                    <checkstyleVersion>10.12.1</checkstyleVersion>
+                    <configLocation>checkstyle.xml</configLocation>
                     <consoleOutput>true</consoleOutput>
                     <failOnViolation>true</failOnViolation>
-                    <validate>false</validate>
                     <enableExternalDtd>false</enableExternalDtd>
                 </configuration>
+
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -44,6 +46,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
