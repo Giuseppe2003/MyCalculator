@@ -21,5 +21,8 @@ jobs:
           java-version: '21'
           cache: maven
 
+      - name: Remove custom Maven settings
+        run: rm -f ~/.m2/settings.xml
+
       - name: Build
         run: mvn -B clean compile
