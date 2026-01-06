@@ -23,6 +23,7 @@
                     </archive>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -31,6 +32,8 @@
                     <configLocation>checkstyle.xml</configLocation> <!-- tuo file personalizzato -->
                     <consoleOutput>true</consoleOutput>
                     <failOnViolation>true</failOnViolation>
+                    <validate>false</validate>
+                    <enableExternalDtd>false</enableExternalDtd>
                 </configuration>
                 <executions>
                     <execution>
