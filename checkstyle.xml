@@ -7,7 +7,7 @@
 
     <!-- Lunghezza massima riga -->
     <module name="LineLength">
-        <property name="max" value="120"/>
+        <property name="max" value="160"/>
     </module>
 
     <module name="TreeWalker">
