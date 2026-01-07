@@ -1,10 +1,10 @@
-name: Continouos integration
+name: Continuous Integration
 
 on:
   push:
-    branches: [ "master"]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "master"]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -33,4 +33,14 @@ jobs:
       - name: Run Checkstyle
         run: mvn verify
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
+      - name: Build Docker image
+        run: docker build -t my-app:latest .
+
+      - name: Run Docker Compose
+        run: docker-compose up -d --build
+
+      - name: Run Tests inside container
+        run: docker-compose exec app mvn test
