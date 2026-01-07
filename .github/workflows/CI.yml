@@ -43,4 +43,4 @@ jobs:
         run: docker compose up -d --build
 
       - name: Run Tests inside container
-        run: docker-compose exec app mvn test
+        run: docker compose exec app mvn test
