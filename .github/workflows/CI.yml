@@ -40,7 +40,7 @@ jobs:
         run: docker build -t my-app:latest .
 
       - name: Run Docker Compose
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
 
       - name: Run Tests inside container
         run: docker-compose exec app mvn test
