@@ -32,3 +32,6 @@ jobs:
 
       - name: Run Checkstyle
         run: mvn verify
+
+      - name: Run PMD
+        run: mvn pmd:check
